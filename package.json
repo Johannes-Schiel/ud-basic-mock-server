@@ -1,0 +1,33 @@
+{
+    "name": "mock-server",
+    "version": "1.0.0",
+    "description": "Einfacher Mock Server für das Testen von Rest APIs für Flutter",
+    "main": "server.js",
+    "scripts": {
+        "generate": "node random.js",
+        "start": "nodemon ./server.js",
+        "dev": "node random.js && nodemon ./server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:Johannes-Schiel/ud-basic-mock-server.git"
+    },
+    "keywords": [
+        "mockserver",
+        "node",
+        "restapi"
+    ],
+    "author": "Johannes Schiel",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "faker": "^5.4.0",
+        "fs": "0.0.1-security",
+        "jsonwebtoken": "^8.5.1"
+    },
+    "devDependencies": {
+        "json-server": "^0.16.3",
+        "nodemon": "^2.0.7"
+    }
+}
