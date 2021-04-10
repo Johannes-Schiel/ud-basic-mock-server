@@ -59,10 +59,9 @@ server.post('/auth/login', (req, res) => {
         res.status(status).json({ status, message })
         return
     }
-    const access_token = createToken({ email, password })
+    const accessToken = createToken({ email, password })
     const user = DATABASE.users.find(user => user.email === email);
-    console.log(user);
-    user.access_token = access_token;
+    user.accessToken = accessToken;
     res.status(200).json(user);
 });
 
@@ -131,7 +130,7 @@ function validateError(error) {
 server.use((req, res, next) => {
     setTimeout(() => {
         next();
-    }, FAKER.random.number({ min: 0, max: 5000 }));
+    }, FAKER.random.number({ min: 2000, max: 5000 }));
 });
 
 // respons random with an error
